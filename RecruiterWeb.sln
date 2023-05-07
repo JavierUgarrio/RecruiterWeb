@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruiterWeb", "RecruiterWeb\RecruiterWeb.csproj", "{CA488C3F-B90C-4271-BBD4-D2E1FF25058F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA488C3F-B90C-4271-BBD4-D2E1FF25058F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA488C3F-B90C-4271-BBD4-D2E1FF25058F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA488C3F-B90C-4271-BBD4-D2E1FF25058F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA488C3F-B90C-4271-BBD4-D2E1FF25058F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BC010B8-F0D4-45C8-8D6C-C03730DD1E33}
+	EndGlobalSection
+EndGlobal
