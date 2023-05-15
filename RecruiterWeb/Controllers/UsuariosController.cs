@@ -31,6 +31,7 @@ namespace RecruiterWeb.Controllers
             }catch (Exception ex)
             {
                 resultado.Error ="Se produjo un error a la hora de obtener los usuarios " + ex.Message;
+                
             }
             return Ok(resultado);
         }

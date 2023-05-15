@@ -20,17 +20,18 @@ namespace RecruiterWeb.Modelos
         public virtual DbSet<DetallesCandidatura> DetallesCandidaturas { get; set; } = null!;
         public virtual DbSet<Proceso> Procesos { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+        public virtual DbSet<UsuariosApi> UsuariosApis { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                //Configuro para que no este hardcodeado la conexion a la bbdd
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                     .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                     .AddJsonFile("appsettings.json")
                     .Build();
                 optionsBuilder.UseSqlServer(configuration.GetConnectionString("SQL"));
+                //optionsBuilder.UseSqlServer("Data Source=DESKTOP-52FC49J;Initial Catalog=Recruiter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
 
@@ -114,6 +115,21 @@ namespace RecruiterWeb.Modelos
                 entity.Property(e => e.Nombre)
                     .HasMaxLength(100)
                     .IsFixedLength();
+
+                entity.Property(e => e.Password).HasMaxLength(500);
+            });
+
+            modelBuilder.Entity<UsuariosApi>(entity =>
+            {
+                entity.ToTable("Usuarios_Api");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(500)
+                    .IsFixedLength();
+
+                entity.Property(e => e.FechaAlta).HasColumnType("datetime");
+
+                entity.Property(e => e.FechaBaja).HasColumnType("datetime");
 
                 entity.Property(e => e.Password).HasMaxLength(500);
             });

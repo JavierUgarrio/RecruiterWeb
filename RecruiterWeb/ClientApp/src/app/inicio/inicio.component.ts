@@ -11,6 +11,6 @@ export class InicioComponent {
   constructor(private router: Router) { }
 
   public Navegar() {
-    this.router.navigate(['/usuario']);
+    this.router.navigate(['/procesos']);
   }
 }
